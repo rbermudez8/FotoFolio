@@ -1,1 +1,13 @@
-<p>gallery works!</p>
+<!-- gallaery.component.html -->
+<div class="thumbnail-grid">
+    <div *ngFor="let image of images" (click)="onImageClick(image)">
+        <img [src]="image.url" alt="{{ image.title }}">
+    </div>
+</div>
+
+<div *ngIf="selectedImage" class="fullscreen-model">
+    <div class="fullscreen-content">
+        <img [src]="selectedImage.url" alt=" {{ selectedImage.title }}">
+        <button (click)="closeFullScreen()">Close</button>
+    </div>
+</div>

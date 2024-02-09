@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
+  images = [
+    { url: 'image1.jpg', title: 'Image 1', description: 'Description 1' },
+    { url: 'image2.jpg', title: 'Image 2', description: 'Description 2' },
+  ];
+
+  selectedImage:any;
+
+  onImageClick(image: any) {
+    this.selectedImage = image;
+  }
+
+  closeFullScreen() {
+    this.selectedImage = null;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
