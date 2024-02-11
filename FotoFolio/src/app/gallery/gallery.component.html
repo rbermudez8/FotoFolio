@@ -1,5 +1,5 @@
 <!-- gallaery.component.html -->
-<div class="thumbnail-grid">
+<div class="gallery-grid">
     <div *ngFor="let image of images" (click)="onImageClick(image)">
         <img [src]="image.url" alt="{{ image.title }}">
     </div>
@@ -11,3 +11,4 @@
         <button (click)="closeFullScreen()">Close</button>
     </div>
 </div>
+

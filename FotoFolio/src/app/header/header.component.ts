@@ -13,5 +13,4 @@ export class HeaderComponent {
   getLogoUrl(): string {
     return this.logoUrl;
   }
-
 }

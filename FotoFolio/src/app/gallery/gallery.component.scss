@@ -1,13 +1,22 @@
 /* gallery.component.scss */
-.thumbnail-grid {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 10px;
 }
 
-.thumbnail-grid img {
+.gallery-grid {
+   position: relative;
+   padding-bottom: 100;
+}
+
+.gallery-grid img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /*preserve aspect ratio */
 }
 
 .fullscreen-model {

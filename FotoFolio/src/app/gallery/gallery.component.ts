@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 export class GalleryComponent {
 
   images = [
-    { url: 'image1.jpg', title: 'Image 1', description: 'Description 1' },
-    { url: 'image2.jpg', title: 'Image 2', description: 'Description 2' },
+    { url: 'Laguna_Ventanilla.jpg', title: 'Playa', description: 'The sandbar between the ocean and Laguna Ventanilla in Oaxaca, Mexico' },
+    { url: 'Playa_de_Ziplote.jpg', title: 'Zipolite', description: 'Taken at the beach at Zipolite, Oaxaca, Mexico' },
+    { url: 'Punta_Cometa.jpg', title: 'Punta Cometa', description: 'Taken at Punta Cometa in Mazunte, Oaxaca, Mexico' },
   ];
 
   selectedImage:any;
