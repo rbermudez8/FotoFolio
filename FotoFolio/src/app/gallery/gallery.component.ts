@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent {
 
   images = [
     { url: 'image1.jpg', title: 'Image 1', description: 'Description 1' },
@@ -21,10 +21,4 @@ export class GalleryComponent implements OnInit {
   closeFullScreen() {
     this.selectedImage = null;
   }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
