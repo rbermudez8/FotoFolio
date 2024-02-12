@@ -1,4 +1,4 @@
-<!-- gallaery.component.html -->
+<!-- gallery.component.html -->
 <div class="gallery-grid">
     <div *ngFor="let image of images" (click)="onImageClick(image)">
         <img [src]="image.url" alt="{{ image.title }}">
