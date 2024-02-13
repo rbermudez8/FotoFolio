@@ -1,14 +1,23 @@
 <!-- gallery.component.html -->
-<div class="gallery-grid">
-    <div *ngFor="let image of images" (click)="onImageClick(image)">
+
+<div class="gallery">
+    <div class="image" *ngFor="let image of images" (click)="onImageClick(image)">
         <img [src]="image.url" alt="{{ image.title }}">
+        <div class="overlay">
+            <h2>{{ image.title }} </h2>
+            <p> {{ image.description }} </p>
+        </div>
     </div>
 </div>
 
-<div *ngIf="selectedImage" class="fullscreen-model">
-    <div class="fullscreen-content">
-        <img [src]="selectedImage.url" alt=" {{ selectedImage.title }}">
-        <button (click)="closeFullScreen()">Close</button>
+<!-- Full Screen model -->
+<div class="model" *ngIf="selectedImage" (click)="closeFullScreen()">
+    <div class="model-content">
+        <span class="close" (click)="closeFullScreen()">&times;</span>
+        <img [src]="selectedImage.url" alt="{{ selectedImage.title }}">
+        <div class="overlay">
+            <h2> {{ selectedImage.title }} </h2>
+            <p> {{ selectedImage.description }}</p>
+        </div>
     </div>
 </div>
-

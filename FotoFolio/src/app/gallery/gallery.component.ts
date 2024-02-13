@@ -8,18 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class GalleryComponent {
 
   images = [
-    { url: 'FotoFolio%2Fsrc%2Fassets%2FPhotos%2FLaguna_Ventanilla.jpg', title: 'Playa', description: 'The sandbar between the ocean and Laguna Ventanilla in Oaxaca, Mexico' },
-    { url: 'FotoFolio/src/assets/Photos/Playa_de_Ziplote.jpg', title: 'Zipolite', description: 'Taken at the beach at Zipolite, Oaxaca, Mexico' },
-    { url: 'FotoFolio/src/assets/Photos/Punta_Cometa.jpg', title: 'Punta Cometa', description: 'Taken at Punta Cometa in Mazunte, Oaxaca, Mexico' },
+    { url: 'photos/Laguna_Ventanilla.jpg', title: 'Laguna Ventanilla Sandbar', description: 'The sandbar between the ocean and Laguna Ventanilla in Mazunte, Oaxaca' },
+    { url: 'photos/Playa_de_Zipolite.jpg', title: 'Zipolite', description: 'Taken at the beach at Zipolite, Oaxaca' },
+    { url: 'photos/Punta_Cometa.jpg', title: 'Punta Cometa', description: 'Taken at Punta Cometa in Mazunte, Oaxaca' },
   ];
   
   selectedImage:any;
 
   onImageClick(image: any) {
     this.selectedImage = image;
+    document.body.classList.add('fullscreen-model-open'); //This adds a class to the body to apply styles for the fullscreen modal
   }
 
   closeFullScreen() {
     this.selectedImage = null;
+    document.body.classList.remove('fullscreen-model-open'); // This removes the class added in onImageClick()
   }
 }
+
