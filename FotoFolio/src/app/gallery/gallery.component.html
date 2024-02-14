@@ -1,7 +1,7 @@
 <!-- gallery.component.html -->
 
 <div class="gallery">
-    <div class="image" *ngFor="let image of images" (click)="onImageClick(image)">
+    <div class="image" *ngFor="let image of images" (click)="openFullView(image)">
         <img [src]="image.url" alt="{{ image.title }}">
         <div class="overlay">
             <h2>{{ image.title }} </h2>
@@ -11,9 +11,9 @@
 </div>
 
 <!-- Full Screen model -->
-<div class="model" *ngIf="selectedImage" (click)="closeFullScreen()">
-    <div class="model-content">
-        <span class="close" (click)="closeFullScreen()">&times;</span>
+<div class="modal" *ngIf="selectedImage" (click)="closeFullView()">
+    <div class="modal-content">
+        <span class="close" (click)="closeFullView()">&times;</span>
         <img [src]="selectedImage.url" alt="{{ selectedImage.title }}">
         <div class="overlay">
             <h2> {{ selectedImage.title }} </h2>

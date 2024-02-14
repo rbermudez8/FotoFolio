@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  logoUrl: string = "assets/logo.jpg"
+  logoUrl: string = "assets/photos/logo.jpg"
 
   constructor() { }
 
