@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { FullViewComponent } from '../full-view/full-view.component';
 
 @Component({
@@ -16,13 +17,18 @@ export class GalleryComponent {
   
   selectedImage:any;
 
+  constructor(private dialog: MatDialog) {}
+
   onImageClick(image: any) {
-    this.selectedImage = image;
-    document.body.classList.add('fullscreen-model-open'); //This adds a class to the body to apply styles for the fullscreen modal
+    this.dialog.open(FullViewComponent, {
+      data: { image },
+      width: '80vw',
+      height: '80vh',
+    });
   }
 
- openFullView() {
-  
+ openFullView(image: any) {
+    this.selectedImage = this.selectedImage === image ? null : image;
  }
 
   closeFullView() {
