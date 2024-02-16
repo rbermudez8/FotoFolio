@@ -11,8 +11,11 @@ export class GalleryComponent {
 
   images = [
     { url: 'assets/photos/Laguna_Ventanilla.jpg', title: 'Laguna Ventanilla Sandbar', description: 'The sandbar between the ocean and Laguna Ventanilla in Mazunte, Oaxaca' },
-    { url: 'assets/photos/Playa_de_Zipolite.jpg', title: 'Zipolite', description: 'Taken at the beach at Zipolite, Oaxaca' },
-    { url: 'assets/photos/Punta_Cometa.jpg', title: 'Punta Cometa', description: 'Taken at Punta Cometa in Mazunte, Oaxaca' },
+    { url: 'assets/photos/Playa_de_Zipolite.jpg', title: 'Zipolite', description: 'Friends and Family at beach in Zipolite, Oaxaca' },
+    { url: 'assets/photos/Punta_Cometa.jpg', title: 'Punta Cometa', description: 'A man watches the waves come in at Punta Cometa in Mazunte, Oaxaca' },
+    { url: 'assets/photos/Puerto_Escondido.jpg', title: 'Puerto Escondido', description: 'Playa Carrizalillo in Puerto Escondido, Oaxaca' },
+    { url: 'assets/photos/Jacobo_Maria.jpg', title: 'Taller Jacobo y María Angeles', description: 'Workshop where Alebrijes are handmade in San Martín Tilcajete' },
+    { url: 'assets/photos/Gentrification.jpg', title: 'Gentrification in Oaxaca', description: 'Modern times' },
   ];
   
   selectedImage:any;
