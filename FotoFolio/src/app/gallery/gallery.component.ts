@@ -18,7 +18,7 @@ export class GalleryComponent {
     { url: 'assets/photos/Gentrification.jpg', title: 'Gentrification in Oaxaca', description: 'Modern times' },
   ];
   
-  selectedImage:any;
+  selectedImage: any;
 
   constructor(private dialog: MatDialog) {}
 
@@ -30,13 +30,17 @@ export class GalleryComponent {
     });
   }
 
- openFullView(image: any) {
-    this.selectedImage = this.selectedImage === image ? null : image;
- }
+  openFullView(image: any) {
+    this.dialog.open(FullViewComponent, {
+      data: image,
+      width: '100vw',
+      height: '100vh',
+    });
+  }
 
   closeFullView() {
     this.selectedImage = null;
-    document.body.classList.remove('fullscreen-model-open'); // This removes the class added in onImageClick()
+    document.body.classList.remove('fullscreen-modal-open'); // Remove the class added in openFullView()
   }
 }
 

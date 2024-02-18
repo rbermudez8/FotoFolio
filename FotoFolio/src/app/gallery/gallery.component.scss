@@ -8,9 +8,7 @@
 .image {
     position: relative;
     cursor: pointer;
-    height: 100%;
     display: flex;
-    justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -21,7 +19,7 @@
 }
 
 .image img.selected {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -34,7 +32,6 @@
 
 .overlay {
     position: absolute;
-   
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px;
@@ -45,12 +42,6 @@
 .image:hover .overlay {
     opacity: 1;
 }
-
-.overlay-content {
-    text-align: center;
-    padding: 10px;
-}
-
 
 .modal {
     display: none;
@@ -114,7 +105,7 @@
         display: block;
     }
 
-    image {
+    .image {
         margin-bottom: 20px;
     }
 

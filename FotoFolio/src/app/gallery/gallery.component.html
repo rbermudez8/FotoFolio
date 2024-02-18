@@ -10,14 +10,14 @@
     </div>
 </div>
 
-<!-- Full Screen model -->
+<!-- Full Screen modal -->
 <div class="modal" *ngIf="selectedImage" (click)="closeFullView()">
     <div class="modal-content">
         <span class="close" (click)="closeFullView()">&times;</span>
-        <img [src]="selectedImage.url" alt="{{ selectedImage.title }}">
+        <img [src]="selectedImage.data?.url" alt="{{ selectedImage.data?.title }}">
         <div class="overlay">
-            <h2> {{ selectedImage.title }} </h2>
-            <p> {{ selectedImage.description }}</p>
+            <h2> {{ selectedImage.data?.title }} </h2>
+            <p> {{ selectedImage.data?.description }}</p>
         </div>
     </div>
 </div>
