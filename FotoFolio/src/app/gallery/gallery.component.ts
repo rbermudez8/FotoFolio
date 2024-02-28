@@ -24,7 +24,7 @@ export class GalleryComponent {
 
   onImageClick(image: any) {
     this.dialog.open(FullViewComponent, {
-      data: { image },
+      data: image,
       width: '80vw',
       height: '80vh',
     });
@@ -32,7 +32,7 @@ export class GalleryComponent {
 
   openFullView(image: any) {
     this.dialog.open(FullViewComponent, {
-      data: { image },
+      data:  { image } ,
       width: '100vw',
       height: '100vh',
     });

@@ -1,25 +1,31 @@
 /* full-view.component.css */
-.fullscreen-model {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+.fullscreen-modal {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    overflow: hidden;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .fullscreen-content {
-    max-width: 90%;
-    max-height: 90%;
-    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .fullscreen-content img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
 }
 
 .close-button {

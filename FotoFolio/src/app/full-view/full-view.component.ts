@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Inject} from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-full-view',
@@ -6,10 +7,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./full-view.component.scss']
 })
 export class FullViewComponent {
-  @Input() image: any;
-  @Output() close = new EventEmitter<void>();
+  image: any;
 
-  onCloseClick() {
-    this.close.emit();
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+    this.image = data.image;
   }
+
+  closeFullView() {
+    this.image = null;
+    document.body.classList.remove('fullscreen-modal-open'); // Remove the class added in openFullView()
+  }
+
 }

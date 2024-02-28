@@ -1,7 +1,11 @@
 <!-- full.view.component.html -->
-<div class="fullscreen-model">
-    <div class="fullscreen-content">
-        <img [src]="image.url" alt="{{ image.title }}">
-        <button class="close-button" (click)="onCloseClick()">Close</button>
+<div class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeFullView()">&times;</span>
+      <img [src]="image?.url" [alt]="image?.title">
+      <div class="overlay">
+        <h2>{{ image?.title }}</h2>
+        <p>{{ image?.description }}</p>
+      </div>
     </div>
-</div>
+ </div>
